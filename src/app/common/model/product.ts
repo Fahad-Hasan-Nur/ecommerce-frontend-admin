@@ -17,5 +17,6 @@ export class Product {
   public createdBy?: string;
   public updatedBy?: string;
   public color?: string[];
+  public description?: string;
 
 }

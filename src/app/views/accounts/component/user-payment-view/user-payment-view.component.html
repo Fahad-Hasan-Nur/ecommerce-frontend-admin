@@ -1,0 +1,98 @@
+<section class="section-content padding-y bg" >
+    <div class="container">
+    
+    
+    
+    <!-- ============================ COMPONENT 2 ================================= -->
+    <div class="row">
+            <main class="col-md-8">
+
+    <article class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title mb-4">Customer Detail:</h4>
+            <div class="row">
+                <div class="col-md-6" >
+                    <figure class="itemside  mb-4">
+                        <figcaption class="info">
+                            <dl class="dlist-align">
+                                <dt >Name:&nbsp;</dt>
+                                <dt>{{customerInfo.firstName}} {{customerInfo.lastName}}</dt>
+                              </dl>
+                            <dl class="dlist-align">
+                              <dt >Email: &nbsp;</dt>
+                              <dt> {{customerInfo.email}}</dt>
+                            </dl>
+                            <dl class="dlist-align">
+                              <dt >Phone Number:&nbsp;</dt>
+                              <dt>{{customerInfo.phoneNumber}}</dt>
+                            </dl>
+                        </figcaption> 
+                    </figure>
+                </div> 
+            </div>
+        </div> 
+        </article> 
+
+        <article class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title mb-4">Transaction Detail:</h4>
+                <div class="row">
+                    <div class="col-md-6" >
+                        <figure class="itemside  mb-4">
+                            <figcaption class="info">
+                                <dl class="dlist-align">
+                                    <dt >Payment Method:&nbsp;</dt>
+                                    <dt>{{data.paymentMethod}}</dt>
+                                  </dl>
+                                <dl class="dlist-align">
+                                  <dt >Payment Information: &nbsp;</dt>
+                                  <dt> {{data.paymentInfo}}</dt>
+                                </dl>
+                            </figcaption> 
+                        </figure>
+                    </div> <!-- col.// -->
+                </div> <!-- row.// -->
+            </div> <!-- card-body.// -->
+            </article> <!-- card.// -->
+    
+    
+   
+    <!-- accordion end.// -->
+      
+            </main> <!-- col.// -->
+            <aside class="col-md-4" >
+                <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="mb-3">Overview</h4>
+                    <dl class="dlist-align">
+                        <dt >Delivery:&nbsp;</dt>
+                        <dt>Home Delivary</dt>
+                      </dl>
+                    <dl class="dlist-align">
+                      <dt >Delivery type:&nbsp;</dt>
+                      <dt>Standart</dt>
+                    </dl>
+                    <dl class="dlist-align">
+                      <dt >Payment method:&nbsp;</dt>
+                      <dt>{{data.paymentMethod}}</dt>
+                    </dl>
+                    <hr>
+                    <dl class="dlist-align">
+                      <dt>Total:</dt>
+                      <dd class="h5">Tk.{{data.totalCost}}</dd>
+                    </dl>
+                    <hr>
+                    <a (click)="close()" class="btn btn-danger btn-block"> Close  </a>
+                    
+                </div> <!-- card-body.// -->
+                </div> <!-- card.// -->
+            </aside> <!-- col.// -->
+        </div> <!-- row.// -->
+    
+    <!-- ============================ COMPONENT 2 END//  ================================= -->
+    
+    
+    
+    
+    </div> <!-- container .//  -->
+    </section>

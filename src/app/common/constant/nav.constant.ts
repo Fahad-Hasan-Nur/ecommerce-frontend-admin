@@ -5,10 +5,16 @@ export const ROLES = {
   DEALER_MANAGER:'DEALER_MANAGER',
   SUPER_ADMIN:'SUPER_ADMIN',
   ADMIN:'ADMIN',
-  DEALER:'DEALER'
+  DEALER:'DEALER',
+  ORDER_MANAGER:'ORDER_MANAGER'
 };
 
 export const MENU_NAME = {
+  USER_ORDER:'User Order',
+  PENDING_ORDER:'Pending Order',
+  CONFIRMED_ORDER:'Confirmed Order',
+  SHIPPED_ORDER:'Shipped Order',
+  COMPLETED_ORDER:'Completed Order',
   PROFILE:'Profile',
   PRODUCT_ADD:'Add Product',
   PRODUCT_LIST: 'Product List',
@@ -41,9 +47,16 @@ export const MENU_NAME = {
   DEALER_COMPLETED_REQUISITION:'Completed Requisition',
   EMPLOYYE_LIST:' Emplyee List',
   EMPLOYYE_ADD:'Add Employee',
+  USER_PAYMENTS:'User Payments',
 };
 
 export const URL = {
+  USER_PAYMENTS:'/accounts/user-payments',
+  USER_ORDER:'/user-order',
+  PENDING_ORDER:'/user-order/pending-order',
+  CONFIRMED_ORDER:'/user-order/confirmed-order',
+  SHIPPED_ORDER:'/user-order/shipped-order',
+  COMPLETED_ORDER:'/user-order/completed-order',
   PROFILE:'/profile',
   DEALER_COMPLETED_REQUISITION:'/dealer/completed',
   ACCOUNTS:'/accounts',
@@ -79,6 +92,12 @@ export const URL = {
 
 };
 export const URL_NAME = {
+  USER_PAYMENTS:'user-payments',
+  USER_ORDER:'user-order',
+  PENDING_ORDER:'pending-order',
+  CONFIRMED_ORDER:'confirmed-order',
+  SHIPPED_ORDER:'shipped-order',
+  COMPLETED_ORDER:'completed-order',
   PROFILE:'profile',
   ACCOUNTS:'accounts',
   ACCOUNTS_VERIFIED_TRANSACTION:'verified-transaction',
@@ -115,6 +134,12 @@ export const URL_NAME = {
   
 };
 export const ICON = {
+  USER_PAYMENTS:'fa fa-users',
+  USER_ORDER:'fa fa-first-order',
+  PENDING_ORDER:'fa fa-spinner',
+  CONFIRMED_ORDER:'fa fa-check-circle',
+  SHIPPED_ORDER:'fa fa-send',
+  COMPLETED_ORDER:'fa fa-check-square-o',
   PROFILE:'icon-people',
   ACCOUNTS:'fa fa-credit-card',
   ACCOUNTS_VERIFIED_TRANSACTION:'fa fa-credit-card-alt',

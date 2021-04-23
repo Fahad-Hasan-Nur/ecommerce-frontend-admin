@@ -85,7 +85,7 @@
         <div class="col-md-12">
           <mat-form-field class="example-full-width">
               <mat-label>{{' Description'}}</mat-label>
-              <textarea matInput placeholder="Write Product Description.." #description='ngModel' name="description" [(ngModel)]="data.description" [required]="true" rows="6"></textarea>
+              <textarea matInput placeholder="Write Product Description.." #description='ngModel' name="description" [(ngModel)]="data.description" [required]="true" rows="6" maxlength="250"></textarea>
           </mat-form-field>
       </div>
 

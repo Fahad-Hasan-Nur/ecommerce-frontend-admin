@@ -76,6 +76,11 @@ export const routes: Routes = [
         canActivate: [AuthGuard],
         loadChildren: () => import('./views/accounts/accounts.module').then(m => m.AccountsModule),
       },
+      {
+        path: URL_NAME.USER_ORDER,
+        canActivate: [AuthGuard],
+        loadChildren: () => import('./views/user-order/user-order.module').then(m => m.UserOrderModule),
+      },
     ],
   },
  

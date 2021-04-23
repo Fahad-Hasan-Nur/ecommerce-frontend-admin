@@ -119,6 +119,14 @@ export class DefaultLayoutComponent implements OnInit {
       privilege.add(MENU_NAME.ACCOUNTS);
       privilege.add(MENU_NAME.ACCOUNTS_VERIFIED_TRANSACTION);
       privilege.add(MENU_NAME.ACCOUNTS_UNVERIFIED_TRANSACTION);
+      privilege.add(MENU_NAME.USER_PAYMENTS);
+    }
+    if(roles==ROLES.ORDER_MANAGER||roles==ROLES.SUPER_ADMIN ){
+      privilege.add(MENU_NAME.USER_ORDER);
+      privilege.add(MENU_NAME.PENDING_ORDER);
+      privilege.add(MENU_NAME.CONFIRMED_ORDER);
+      privilege.add(MENU_NAME.SHIPPED_ORDER);
+      privilege.add(MENU_NAME.COMPLETED_ORDER);
     }
     privilege.add(MENU_NAME.PROFILE);
     this.navItems = this.filterNavItems(getNavItems(), privilege);

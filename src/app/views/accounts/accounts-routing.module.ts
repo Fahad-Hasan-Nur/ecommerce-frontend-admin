@@ -1,3 +1,4 @@
+import { UserPaymentsComponent } from './user-payments/user-payments.component';
 import { UnverifiedTransactionComponent } from './unverified-transaction/unverified-transaction.component';
 import { VerifiedTransactionComponent } from './verified-transaction/verified-transaction.component';
 import { NgModule } from '@angular/core';
@@ -24,6 +25,13 @@ const routes: Routes = [
       data: {
         title: MENU_NAME.ACCOUNTS_UNVERIFIED_TRANSACTION
       },
+    },
+      {
+        path:  URL_NAME.USER_PAYMENTS,
+        component:  UserPaymentsComponent,
+        data: {
+          title: MENU_NAME.USER_PAYMENTS
+        },
     }
   ]
 }

@@ -1,0 +1,79 @@
+.img-sm {
+    width: 80px;
+    height: 80px;
+  }
+  .dlist-align {
+    display: flex;
+  }
+  .dlist-align dt {
+    width: 150px;
+    word-wrap: break-word;
+    font-weight: normal;
+  }
+  .dlist-align dd {
+    flex-grow: 1;
+  }
+  .card-banner .card-body {
+    background-size: cover;
+    position: relative;
+    z-index: 10;
+  }
+  dl[class=row] {
+    margin-bottom: 0;
+  }
+  a[class*=card] {
+    color: initial;
+  }
+  a[class*=card]:hover .title {
+    color: #3167eb;
+  }
+  .card-banner .card-body {
+    background-size: cover;
+    position: relative;
+    z-index: 10;
+  }
+  dl[class=row] {
+    margin-bottom: 0;
+  }
+  [class*=dlist-] {
+    margin-bottom: 5px;
+  }
+  [class*=dlist-] dd {
+    margin-bottom: 0;
+  }
+  
+  .dlist-inline dt, .dlist-inline dd {
+    display: inline-block;
+  }
+  .itemside {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  .itemside .aside {
+    position: relative;
+    flex-shrink: 0;
+  }
+  .itemside .info {
+    padding-left: 15px;
+    padding-right: 7px;
+  }
+  .itemside p {
+    margin-bottom: 0;
+  }
+  .itemside .title {
+    display: block;
+    margin-bottom: 5px;
+    color: #212529;
+  }
+  .itemside a.title:hover {
+    color: #3167eb;
+  }
+  
+  a.itemside {
+    color: initial;
+  }
+
+
+
+  

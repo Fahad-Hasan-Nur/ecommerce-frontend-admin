@@ -18,5 +18,4 @@ export class Product {
   public updatedBy?: string;
   public color?: string[];
   public description?: string;
-
 }

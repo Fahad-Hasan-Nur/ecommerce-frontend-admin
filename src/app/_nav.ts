@@ -238,6 +238,62 @@ export const navItems: NavData[] = [
       },
     ]
   },
+  //User Order
+  {
+    name: MENU_NAME.USER_ORDER,
+    url: URL.USER_ORDER,
+    icon: ICON.USER_ORDER,
+    children: [
+      //Pending order
+      {
+        name: MENU_NAME.PENDING_ORDER,
+        url: URL.PENDING_ORDER,
+        icon: ICON.PENDING_ORDER,
+        authorities: [MENU_NAME.PENDING_ORDER],
+        requiredRole: [
+          ROLES.SUPER_ADMIN,
+          ROLES.ADMIN,
+          ROLES.ORDER_MANAGER
+        ]
+      },
+      //confirmed order
+      {
+        name: MENU_NAME.CONFIRMED_ORDER,
+        url: URL.CONFIRMED_ORDER,
+        icon: ICON.CONFIRMED_ORDER,
+        authorities: [MENU_NAME.CONFIRMED_ORDER],
+        requiredRole: [
+          ROLES.ADMIN,
+          ROLES.SUPER_ADMIN,
+          ROLES.ORDER_MANAGER
+        ]
+      },
+        //shipped order 
+        {
+          name: MENU_NAME.SHIPPED_ORDER,
+          url: URL.SHIPPED_ORDER,
+          icon: ICON.SHIPPED_ORDER,
+          authorities: [MENU_NAME.SHIPPED_ORDER],
+          requiredRole: [
+            ROLES.ADMIN,
+            ROLES.SUPER_ADMIN,
+            ROLES.ORDER_MANAGER
+          ]
+        },
+          //completed order 
+      {
+        name: MENU_NAME.COMPLETED_ORDER,
+        url: URL.COMPLETED_ORDER,
+        icon: ICON.COMPLETED_ORDER,
+        authorities: [MENU_NAME.COMPLETED_ORDER],
+        requiredRole: [
+          ROLES.ADMIN,
+          ROLES.SUPER_ADMIN,
+          ROLES.ORDER_MANAGER
+        ]
+      },
+    ]
+  },
   //Dealer Manager
   {
     name: MENU_NAME.DEALER_MANAGER,
@@ -318,6 +374,13 @@ export const navItems: NavData[] = [
         url: URL.ACCOUNTS_UNVERIFIED_TRANSACTION,
         icon: ICON.ACCOUNTS_UNVERIFIED_TRANSACTION,
         authorities: [MENU_NAME.ACCOUNTS_UNVERIFIED_TRANSACTION],
+      },
+      //User payment
+      {
+        name: MENU_NAME.USER_PAYMENTS,
+        url: URL.USER_PAYMENTS,
+        icon: ICON.USER_PAYMENTS,
+        authorities: [MENU_NAME.USER_PAYMENTS],
       },
     ]
   },

@@ -23,7 +23,6 @@ export class P500Component implements OnInit  {
   public verified: boolean=true;
   public loading:boolean;
  public token:string=null;
-  public error: boolean=true;
   public login: boolean=true;
   public myFilter: any;
   public imageError: string;
@@ -107,7 +106,7 @@ public removeImage2() {
       },
       (err) => {
         console.log(err);
-        this.error=false;
+        this.toastService.openSnackBar(err.error.text, this.toastService.ACTION_WRONG, this.toastService.CLASS_NAME_WRONG);
       });
   }
   public register(){

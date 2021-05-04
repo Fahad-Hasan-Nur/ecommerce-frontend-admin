@@ -54,13 +54,14 @@ export class UserPaymentsComponent implements OnInit {
   }
 
   public confirmOrder(data:UserOrder) {
-
     data.updatedBy = this.storage.usersStorage().id;
     data.status="CONFIRMED";
     this.orderService.updateOrderStatus(data).subscribe
       (
         (response) => {
           this.toastService.openSnackBar(success_message.UPDATED_SUCCESSFULLY, this.toastService.ACTION_SUCESS, this.toastService.CLASS_NAME_SUCESS);
+          setTimeout(null, 10000);
+          window.location.reload();
         }, (error) => {
           console.log(error);
           this.toastService.openSnackBar(success_message.FAILD, this.toastService.ACTION_WRONG, this.toastService.CLASS_NAME_WRONG);
@@ -75,6 +76,8 @@ export class UserPaymentsComponent implements OnInit {
       (response) => {
         this.toastService.openSnackBar(success_message.DELETED_SUCCESSFULLY, this.toastService.ACTION_SUCESS, this.toastService.CLASS_NAME_SUCESS);
         this.loading = false;
+        setTimeout(null, 10000);
+          window.location.reload();
       },
       (error) => {console.log(error),
       this.toastService.openSnackBar(error.error.text, this.toastService.ACTION_WRONG, this.toastService.CLASS_NAME_WRONG);

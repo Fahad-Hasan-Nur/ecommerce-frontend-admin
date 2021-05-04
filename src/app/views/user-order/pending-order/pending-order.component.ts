@@ -68,18 +68,21 @@ export class PendingOrderComponent  implements OnInit {
       (response) => {
         this.toastService.openSnackBar(success_message.DELETED_SUCCESSFULLY, this.toastService.ACTION_SUCESS, this.toastService.CLASS_NAME_SUCESS);
         this.loading = false;
+        setTimeout(alert, 10000);
+      window.location.reload();
       },
       (error) => {console.log(error),
       this.toastService.openSnackBar(error.error.text, this.toastService.ACTION_WRONG, this.toastService.CLASS_NAME_WRONG);
-      setTimeout(alert, 10000);
-      window.location.reload();
+      
       });
   }
   updateData(data:UserOrder){
     this.orderService.updateOrderStatus(data).subscribe
     (
       (response) => {
-        this.toastService.openSnackBar(success_message.UPDATED_SUCCESSFULLY, this.toastService.ACTION_SUCESS, this.toastService.CLASS_NAME_SUCESS);
+        this.toastService.openSnackBar(success_message.ORDER_CONFIRM, this.toastService.ACTION_SUCESS, this.toastService.CLASS_NAME_SUCESS);
+        setTimeout(alert, 10000);
+        window.location.reload();
       }, (error) => {
         console.log(error);
         this.toastService.openSnackBar(success_message.FAILD, this.toastService.ACTION_WRONG, this.toastService.CLASS_NAME_WRONG);

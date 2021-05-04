@@ -29,10 +29,6 @@ export class AuthService {
         let user = new Admin();
         let tokenValue = jwt_decode(token);
         user.email = tokenValue.sub;
-        // user.username = tokenValue.user_name;
-        // user.oid = tokenValue.userOid;
-        // user.employeeOfficeId = tokenValue.employeeOfficeId;
-        // user.officeOid = tokenValue.officeId;
         user.exp = tokenValue.exp;
         resolved(user);
       } catch (error) {

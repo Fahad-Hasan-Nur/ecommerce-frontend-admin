@@ -14,9 +14,11 @@ export const success_message = {
   FAILD: 'Failed to Save',
   UPDATED_SUCCESSFULLY: 'Updated Successfully',
   DELETED_SUCCESSFULLY: 'Deleted Successfully',
-  FAILED_UPLOAD_IMAGE:'Failed to Upload Image.'
-};
-
+  FAILED_UPLOAD_IMAGE:'Failed to Upload Image.',
+  ORDER_CONFIRM:'Confirmed Order',
+  ORDER_SHIPPED:'Shipped Order Product',
+  ORDER_COMPLETE:'Completed Order'
+}
 export const error_message = {
   FAILED_DELETE:'Failed to Delete...',
   UPDATE_FAILED: 'Update Failed',

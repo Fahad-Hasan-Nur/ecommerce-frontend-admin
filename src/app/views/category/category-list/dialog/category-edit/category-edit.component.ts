@@ -42,16 +42,16 @@ export class CategoryEditComponent implements OnInit {
              }
 
   public ngOnInit() {
-    this.setStateCategory(this.category);
+    // this.setStateCategory(this.category);
   }
 
-  public setStateCategory(category: Category): void {
-    this.stateService.setCategory(category);
-  }
+  // public setStateCategory(category: Category): void {
+  //   this.stateService.setCategory(category);
+  // }
   public save() {
     this.loader.loading = true;
     this.category.updatedBy=this.storage.usersStorage().id;
-    this.categoryService.updateCategory(this.stateService.getCategory()).subscribe
+    this.categoryService.updateCategory(this.category).subscribe
       (
         (response) => {
           this.toastService.openSnackBar(success_message.UPDATED_SUCCESSFULLY, this.toastService.ACTION_SUCESS, this.toastService.CLASS_NAME_SUCESS);

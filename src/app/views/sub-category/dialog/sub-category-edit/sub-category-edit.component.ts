@@ -37,7 +37,6 @@ export class SubCategoryEditComponent implements OnInit {
   }
 
   public ngOnInit() {
-    this.setStateSubCategory(this.subCategory);
     this.getCategory();
   }
 
@@ -49,16 +48,13 @@ export class SubCategoryEditComponent implements OnInit {
         console.log(err);
       });
   }
-  public setStateSubCategory(subCategory: SubCategory): void {
-    this.stateService.setSubCategory(subCategory);
-  }
   public onSelectCategory(value: string): void {
     this.subCategory.categoryName = value;
   }
   public save() {
     this.loader.loading = true;
     this.subCategory.updatedBy = this.storage.usersStorage().id;
-    this.subCategoryService.updateSubCategory(this.stateService.getSubCategory()).subscribe
+    this.subCategoryService.updateSubCategory(this.subCategory).subscribe
       (
         (response) => {
           this.toastService.openSnackBar(success_message.UPDATED_SUCCESSFULLY, this.toastService.ACTION_SUCESS, this.toastService.CLASS_NAME_SUCESS);

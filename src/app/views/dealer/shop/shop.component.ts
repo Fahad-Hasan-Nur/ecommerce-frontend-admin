@@ -222,8 +222,11 @@ export class ShopComponent implements OnInit {
     );
   }
   addMore() {
+    if(this.allReq.length<=4){
+      console.log(this.allReq.length)
     this.data.createdBy = this.storage.usersStorage().id;
     this.allReq.push(this.data)
+   
     this.dataSource.data = this.allReq as RequisitionProduct[];
     this.view = false;
     this.a = new Product();
@@ -239,6 +242,10 @@ export class ShopComponent implements OnInit {
     this.showProduct = true;
     this.showSubCategory = true;
     this.list = true;
+    }else{
+      this.toastService.openSnackBar(success_message.MAX_ITEM, this.toastService.ACTION_WRONG, this.toastService.CLASS_NAME_WRONG);
+
+    }
   }
 
   openDialogPayNow(data?) {

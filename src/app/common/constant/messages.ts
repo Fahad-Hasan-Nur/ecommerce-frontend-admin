@@ -12,6 +12,7 @@ export const success_message = {
   SAVED_SUCCESSFULLY: 'Saved Successfully',
   MAIL:'Check your mail to Activate Account...',
   FAILD: 'Failed to Save',
+  MAX_ITEM:'Can not add more than 5 items.',
   UPDATED_SUCCESSFULLY: 'Updated Successfully',
   DELETED_SUCCESSFULLY: 'Deleted Successfully',
   FAILED_UPLOAD_IMAGE:'Failed to Upload Image.',

@@ -187,8 +187,8 @@ private _filter(value: string): string[] {
         // Size Filter Bytes
         const max_size = 2097000/5;
         const allowed_types = ['image/png', 'image/jpeg'];
-        const max_height = 300;
-        const max_width = 300;
+        const max_height = 1000;
+        const max_width = 1000;
 
         if (fileInput.target.files[0].size > max_size) {
             this.imageError =

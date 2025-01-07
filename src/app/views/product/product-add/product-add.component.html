@@ -51,7 +51,7 @@
         <div class="col-md-6">
           <mat-form-field>
             <mat-label>{{' Brand ​'}}</mat-label>
-            <mat-select #autoBrand="matSelect" [required]="true" placeholder="Select Brand" aria-label="State"
+            <mat-select #autoBrand="matSelect" [required]="false" placeholder="Select Brand" aria-label="State"
               #brand='ngModel' name="brand" [(ngModel)]="data.brandId">
               <mat-option *ngFor="let brand of brandList" [value]="brand.id"
                 (onSelectionChange)="onSelectBrand(brand.name)">

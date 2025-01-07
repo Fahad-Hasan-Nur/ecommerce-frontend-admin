@@ -64,7 +64,12 @@ export class P500Component implements OnInit  {
     public ngOnInit() {
       this.setStateAuth(this.data);
       this.setStateAdmin(this.admin);
-      this.token = this.route.snapshot.params.id;
+      
+      if(this.route.snapshot.params.id=="Registration"){
+        this.login=false;
+      }else {
+        this.token = this.route.snapshot.params.id;
+      }
       if(this.token!=null){
         this.activateUser(this.token);
       }

@@ -33,7 +33,7 @@ export class VariationComponent implements OnInit {
   public disable:boolean=false;
   public update:boolean=false;
   public displayedColumns: string[] = ['Name', 'Price', 'Quantity', 'Discount', 'action'];
-  public sizeData: string[]=['S (Small)','M (Medium)','L (Large)','XL (Extra Large)','XXL (Extra Large)','250ml','500ml','1L','2L','5L'];
+  public sizeData: string[]=['S (Small)','M (Medium)','L (Large)','XL (Extra Large)','XXL (Extra Large)','250ml','500ml','1L','2L','5L','Default'];
   public dataSource = new MatTableDataSource;
   public var: Variation[]=[];
 

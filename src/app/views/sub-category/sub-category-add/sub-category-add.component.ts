@@ -59,7 +59,7 @@ export class SubCategoryAddComponent implements OnInit {
   public save() {
     this.loader.loading = true;
     this.data.createdBy=this.storage.usersStorage().id;
-    this.subCategoryService.addSubCategory(this.stateService.getSubCategory()).subscribe
+    this.subCategoryService.addSubCategory(this.data).subscribe
       (
         (response) => {
           this.toastService.openSnackBar(success_message.CREATED_SUCCESSFULLY, this.toastService.ACTION_SUCESS, this.toastService.CLASS_NAME_SUCESS);
